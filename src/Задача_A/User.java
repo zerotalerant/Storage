@@ -7,6 +7,10 @@ public class User {
     public String password;
     public boolean ifProfileBlocked;
 
+    public User(){
+
+    }
+
     public User(String initial, String login, int age, String password, boolean ifProfileBlocked) {
         this.initial = initial;
         this.login = login;
