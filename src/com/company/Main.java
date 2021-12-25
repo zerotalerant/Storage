@@ -16,7 +16,7 @@ public class Main {
             }
         }
         System.out.println(Arrays.toString(circle));
-  //     System.out.println("Area: " + circle.getSquare());
-//      System.out.println("Length: " + circle.getNumberOfCircles());
+        System.out.println("Area: " + circle.getSquare());
+        System.out.println("Length: " + circle.getNumberOfCircles());
     }
 }
