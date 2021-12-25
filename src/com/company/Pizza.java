@@ -2,40 +2,52 @@ package com.company;
 
 public class Pizza {
 
-    public String price;
-    public String weight;
-    public String make;
+    public int price;
+    public double weight;
+    public String bake;
     public String delivery;
 
-    public Pizza(String price, String weight, String make, String delivery) {
+    public Pizza(int price, int weight, String make, String delivery) {
         this.price = price;
         this.weight = weight;
-        this.make = make;
+        this.bake = make;
         this.delivery = delivery;
     }
 
-    public String getPrice() {
+    public Pizza() {
+
+    }
+
+    public void bakePizza() {
+        System.out.println("Приготовить пиццу");
+    }
+
+    public void deliveryPizza() {
+        System.out.println("Доставить пиццу");
+    }
+
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public String getMake() {
-        return make;
+    public String getBake() {
+        return bake;
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public void setBake(String make) {
+        this.bake = make;
     }
 
     public String getDelivery() {
