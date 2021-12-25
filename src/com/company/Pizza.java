@@ -18,6 +18,16 @@ public class Pizza {
 
     }
 
+    @Override
+    public String toString() {
+        return "Pizza{" +
+                "price=" + price +
+                ", weight=" + weight +
+                ", bake='" + bake + '\'' +
+                ", delivery='" + delivery + '\'' +
+                '}';
+    }
+
     public void bakePizza() {
         System.out.println("Приготовить пиццу");
     }
