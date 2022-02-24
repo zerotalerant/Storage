@@ -16,7 +16,7 @@ public class LaFinta extends Pizza {
         return withMushrooms;
     }
 
-    public void setWithMushrooms(boolean withMushrooms) {
+    public static void setWithMushrooms(boolean withMushrooms) {
         this.withMushrooms = withMushrooms;
     }
 }

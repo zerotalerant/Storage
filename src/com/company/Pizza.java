@@ -4,7 +4,6 @@ public class Pizza {
     private int price;
     private double weight;
     private String bake;
-    private boolean delivery;
 
 
     public Pizza() {
@@ -19,7 +18,7 @@ public class Pizza {
         return price;
     }
 
-    public void setPrice(int price) {
+    public static void setPrice(int price) {
         this.price = price;
     }
 
@@ -27,7 +26,7 @@ public class Pizza {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public static void setWeight(double weight) {
         this.weight = weight;
     }
 
@@ -35,15 +34,9 @@ public class Pizza {
         return bake;
     }
 
-    public void setBake(String bake) {
+    public static void setBake(String bake) {
         this.bake = bake;
     }
 
-    public boolean isDelivery() {
-        return delivery;
-    }
 
-    public void setDelivery(boolean delivery) {
-        this.delivery = delivery;
-    }
 }

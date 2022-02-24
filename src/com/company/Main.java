@@ -9,10 +9,10 @@ public class Main {
         do {
             System.out.println(
                     "                  Меню\n" +
-                            "             1 . Margaritta\n" +
-                            "             2 . LaFinta\n" +
-                            "             3 . Peperoni\n" +
-                            "             0 . Завершить заказ\n");
+                            "             1 . Margaritta " +
+                            "             2 . LaFinta " +
+                            "             3 . Peperoni " +
+                            "             0 . Завершить заказ ");
 
             point = scanner.nextInt();
             switch (point) {
