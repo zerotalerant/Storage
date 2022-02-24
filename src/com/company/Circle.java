@@ -1,31 +1,34 @@
-    package com.company;
+package com.company;
 
 public class Circle {
-    private int numberOfCircles;
-    private final double radius;
-    private double square;
+    private double radius;
+    private static final double PI = 3.14;
+    int count = 0;
 
-    public Circle(int numberOfCircles, double radius, double square) {
-        this.numberOfCircles = numberOfCircles;
+    public Circle() {
+
+    }
+
+    public Circle(double radius) {
         this.radius = radius;
-        this.square = square;
-    }
-
-    private double getSquare() {
-        final double PI = 3.14;
-        return PI * radius * radius;
-    }
-
-    public double getNumberOfCircles() {
-        return (int) (getSquare() % 3);
     }
 
     public double getRadius() {
         return radius;
     }
 
-    @Override
-    public String toString() {
-        return "Радиус = " + radius;
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public void square() {
+        double num = PI * radius * 2;
+        if ((num % 3) == 0) {
+            System.out.println("Круги, Y которых кратен 3: " + num);
+            count++;
+
+        } else {
+            System.out.println("Площадь: " + num);
+        }
     }
 }
