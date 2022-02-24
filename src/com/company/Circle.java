@@ -22,13 +22,12 @@ public class Circle {
     }
 
     public void square() {
-        double num = PI * radius * 2;
-        if ((num % 3) == 0) {
-            System.out.println("Круги, Y которых кратен 3: " + num);
+        double y = PI * radius * 2;
+        if ((y % 3) == 0) {
+            System.out.println("Круги, Y которых кратен 3: " + y);
             count++;
-
         } else {
-            System.out.println("Площадь: " + num);
+            System.out.println("Площадь: " + y);
         }
     }
 }
