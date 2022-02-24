@@ -1,22 +1,23 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Peperoni extends Pizza {
-    public static void main(String[] args) {
 
-        public static List<String> getPeperoni; (int spicy;) {
-            List<String> result = new ArrayList<>();
-            switch (spicy) {
-                case 1:
-                    System.out.println("Острая");
-                    break;
-                case 2:
-                    System.out.println("Не острая");
-                default:
-                    break;
-            }
-        }
+    private boolean spicy;
+
+    public Peperoni() {
+
+    }
+
+    @Override
+    public String toString() {
+            return "Пеперони: " + " Цена: " + getPrice() + " Вес: " + getWeight() + " Готовка: " + canBake();
+    }
+
+    public boolean isSpicy() {
+        return spicy;
+    }
+
+    public void setSpicy(boolean spicy) {
+        this.spicy = spicy;
     }
 }

@@ -1,39 +1,18 @@
 package com.company;
 
 public class Pizza {
+    private int price;
+    private double weight;
+    private String bake;
+    private boolean delivery;
 
-    public int price;
-    public double weight;
-    public String bake;
-    public String delivery;
-
-    public Pizza(int price, int weight, String make, String delivery) {
-        this.price = price;
-        this.weight = weight;
-        this.bake = make;
-        this.delivery = delivery;
-    }
 
     public Pizza() {
-
     }
 
-    @Override
-    public String toString() {
-        return "Pizza{" +
-                "price=" + price +
-                ", weight=" + weight +
-                ", bake='" + bake + '\'' +
-                ", delivery='" + delivery + '\'' +
-                '}';
-    }
-
-    public void bakePizza() {
-        System.out.println("Приготовить пиццу");
-    }
-
-    public void deliveryPizza() {
-        System.out.println("Доставить пиццу");
+    public Pizza(int price, double weight) {
+        this.price = price;
+        this.weight = weight;
     }
 
     public int getPrice() {
@@ -52,19 +31,19 @@ public class Pizza {
         this.weight = weight;
     }
 
-    public String getBake() {
+    public String canBake() {
         return bake;
     }
 
-    public void setBake(String make) {
-        this.bake = make;
+    public void setBake(String bake) {
+        this.bake = bake;
     }
 
-    public String getDelivery() {
+    public boolean isDelivery() {
         return delivery;
     }
 
-    public void setDelivery(String delivery) {
+    public void setDelivery(boolean delivery) {
         this.delivery = delivery;
     }
 }
