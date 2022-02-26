@@ -21,6 +21,7 @@ public class Main {
             }
             duplicate.add ( numbers.charAt ( i ) );
         }
+
         System.out.println ( duplicate );
     }
 }
