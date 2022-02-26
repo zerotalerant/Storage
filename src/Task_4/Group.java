@@ -1,25 +1,27 @@
 package Task_4;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
 import java.util.Objects;
 
 public class Group {
-    public String nameOfGroup;
-    public int cours;
-    public int numberOfGroup;
-    public ArrayList<Student> listOfStudents;
+    private String nameOfGroup;
+    private int course;
+    private int numberOfGroup;
+    private ArrayList<Student> students;
 
     public Group ()
     {
 
     }
 
-    public Group ( String nameOfGroup, int cours, int numberOfGroup, ArrayList<Student> listOfStudents )
+    public Group ( String nameOfGroup, int course, int numberOfGroup, ArrayList<Student> students )
     {
         this.nameOfGroup = nameOfGroup;
-        this.cours = cours;
+        this.course = course;
         this.numberOfGroup = numberOfGroup;
-        this.listOfStudents = listOfStudents;
+        this.students = students;
     }
 
     public String getNameOfGroup ()
@@ -32,14 +34,14 @@ public class Group {
         this.nameOfGroup = nameOfGroup;
     }
 
-    public int getCours ()
+    public int getCourse ()
     {
-        return cours;
+        return course;
     }
 
-    public void setCours ( int cours )
+    public void setCourse ( int course )
     {
-        this.cours = cours;
+        this.course = course;
     }
 
     public int getNumberOfGroup ()
@@ -52,24 +54,24 @@ public class Group {
         this.numberOfGroup = numberOfGroup;
     }
 
-    public ArrayList<Student> getListOfStudents ()
+    public ArrayList<Student> getStudents ()
     {
-        return listOfStudents;
+        return students;
     }
 
-    public void setListOfStudents ( ArrayList<Student> listOfStudents )
+    public void setStudents ( ArrayList<Student> listOfStudents )
     {
-        this.listOfStudents = listOfStudents;
+        this.students = listOfStudents;
     }
 
     @Override
     public String toString ()
     {
-        return "Группа: " +
+        return "Информация о группе: " +
                "название группы: " + nameOfGroup +
-               ", курс: " + cours +
+               ", курс: " + course +
                ", номер группы: " + numberOfGroup +
-               ", список студентов: " + listOfStudents;
+               ", список студентов: " + students;
     }
 
     @Override
@@ -84,12 +86,14 @@ public class Group {
             return false;
         }
         Group group = ( Group ) o;
-        return cours == group.cours && numberOfGroup == group.numberOfGroup && Objects.equals ( nameOfGroup, group.nameOfGroup ) && Objects.equals ( listOfStudents, group.listOfStudents );
+        return course == group.course && numberOfGroup == group.numberOfGroup && Objects.equals ( nameOfGroup, group.nameOfGroup ) && Objects.equals ( students, group.students );
     }
 
     @Override
     public int hashCode ()
     {
-        return Objects.hash ( nameOfGroup, cours, numberOfGroup, listOfStudents );
+        return Objects.hash ( nameOfGroup, course, numberOfGroup, students );
+
     }
+
 }

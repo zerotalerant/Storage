@@ -1,11 +1,14 @@
 package Task_4;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 public class Student {
-    public int pin;
-    public String name;
-    public int marks;
+    private int pin;
+    private String name;
+    private List<Integer> marks;
 
     public Student ()
     {
@@ -16,7 +19,7 @@ public class Student {
     {
         this.pin = pin;
         this.name = name;
-        this.marks = marks;
+        this.marks = Collections.singletonList ( marks );
     }
 
     public int getPin ()
@@ -39,23 +42,22 @@ public class Student {
         this.name = name;
     }
 
-    public int getMarks ()
+    public List<Integer> getMarks ()
     {
         return marks;
     }
 
-    public void setMarks ( int marks )
+    public void setMarks ( List<Integer> marks )
     {
         this.marks = marks;
     }
-
     @Override
     public String toString ()
     {
         return "Студент: " +
-               "пин" + pin +
-               ", имя" + name +
-               ", оценка" + marks;
+               "пин: " + pin +
+               ", имя: " + name +
+               ", оценки: " + marks;
     }
 
     @Override
@@ -70,12 +72,22 @@ public class Student {
             return false;
         }
         Student student = ( Student ) o;
-        return pin == student.pin && marks == student.marks && Objects.equals ( name, student.name );
+        return pin == student.pin && Objects.equals ( name, student.name ) && Objects.equals ( marks, student.marks );
     }
 
     @Override
     public int hashCode ()
     {
         return Objects.hash ( pin, name, marks );
+    }
+
+    public int avg ()
+    {
+        int avg = 0;
+        for (int i = 0; i < marks.size (); i++)
+        {
+            avg = avg + ( marks.get ( i ) / marks.size () );
+        }
+        return avg;
     }
 }
