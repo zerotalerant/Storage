@@ -72,25 +72,4 @@ public class Order {
                ", время заказа: " + timeOrders +
                ", продукт: " + products;
     }
-
-    @Override
-    public boolean equals ( Object o )
-    {
-        if ( this == o )
-        {
-            return true;
-        }
-        if ( o == null || getClass () != o.getClass () )
-        {
-            return false;
-        }
-        Order order = ( Order ) o;
-        return numberOfOrder == order.numberOfOrder && Objects.equals ( dateOrders, order.dateOrders ) && Objects.equals ( timeOrders, order.timeOrders ) && Objects.equals ( products, order.products );
-    }
-
-    @Override
-    public int hashCode ()
-    {
-        return Objects.hash ( numberOfOrder, dateOrders, timeOrders, products );
-    }
 }
