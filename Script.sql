@@ -67,4 +67,8 @@ values ('Ivanov Alexander', '2022-02-03 16:50', 'Iliya Biceps');
 
 select * from visit;
 
-select * from visitor;
+select * from visitor;	
+
+delete from visitor where t visitor t.fio = 'Oleg Mask'
+
+
